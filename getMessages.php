@@ -1,13 +1,13 @@
 <?php
-    $chatlog = "chatlog.txt";
+    $log = "chatlog.txt";
     
-    if(!filesize($chatlog))
+    if(!filesize($log))
     {
         return;
     }
     
-    $fh = fopen($chatlog, 'r');
-    $text = fread($fh, filesize($chatlog));
+    $fh = fopen($log, 'r');
+    $text = fread($fh, filesize($log));
     fclose($fh);
     echo $text;
 ?>
