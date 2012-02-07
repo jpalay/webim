@@ -5,8 +5,8 @@
     }
     
     $message = $_GET['msg'];
-    $chatlog = "chatlog.txt";
-    $fh = fopen($chatlog, 'a');
+    $log = "chatlog.txt";
+    $fh = fopen($log, 'a');
     fwrite($fh, $message);
     fclose($fh);
 ?>
