@@ -51,12 +51,7 @@ function submitMessage()
     
     var ajaxRequest = getRequest();
     
-    ajaxRequest.onreadystatechange = function(){
-		if(ajaxRequest.readyState == 4 && ajaxRequest.status == 200)
-		{   
-			//getMessages();
-		}
-	};
+    ajaxRequest.onreadystatechange = function() { };
     
 	var rand = Math.round(99999999999*Math.random());
 	ajaxRequest.open("GET", "sendMessage.php?msg=" + message +"&rand=" + rand, true);
